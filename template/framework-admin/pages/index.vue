@@ -1,5 +1,6 @@
 <template>
   <section class="index">
+    <p>index</p>
     <nuxt-child></nuxt-child>
   </section>
 </template>
@@ -14,7 +15,5 @@ export default {
 .index {
   position: relative;
   max-width: (@--min-width - 48px);
-  height: calc(100vh - @--header-height - @--footer-height - 24px);
-  margin: 24px auto 0;
 }
 </style>
