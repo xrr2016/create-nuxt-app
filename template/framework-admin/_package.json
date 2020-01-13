@@ -10,5 +10,8 @@
     "@femessage/el-data-table": "latest",
     "@femessage/el-form-renderer": "latest",
     "@femessage/element-ui": "latest"
+  },
+  "devDependencies": {
+    "svg-sprite-loader": "^4.1.6"
   }
 }

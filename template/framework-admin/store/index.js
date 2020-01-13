@@ -1,8 +1,6 @@
 import cookie from 'js-cookie'
 import meta from '@/const/meta'
 
-const sideMenuCache = new Map()
-
 const cookieConfig = {
   get domain() {
     const { hostname } = location
@@ -16,6 +14,15 @@ const cookieConfig = {
     const twoHours = 2 * 60 * 60 * 1000
     return new Date(Date.now() + twoHours)
   },
+}
+
+const createMenuItem = ({ name = '', id = '', pathUrl = '/', iconUrl }) => {
+  return {
+    url: pathUrl,
+    id: id,
+    name: name,
+    icon: iconUrl,
+  }
 }
 
 export const state = () => ({
@@ -32,9 +39,17 @@ export const state = () => ({
   appId: '',
   tenantId: '',
   thirdId: '',
+  headerMenu: [],
+  siderMenu: [],
 })
 
 export const getters = {
+  sideMenu: state => {
+    return state.siderMenu.map(createMenuItem)
+  },
+  mainMenu: state => {
+    return state.headerMenu.map(createMenuItem)
+  },
   userInfo: state => {
     return {
       name: state.username,
