@@ -4,7 +4,7 @@
       <logo class="login-logo" />
       <nuxt></nuxt>
     </div>
-    <div class="buttom-wrapper font-s text-center ">
+    <div class="buttom-wrapper font-s text-center">
       <copyright></copyright>
     </div>
   </main>
@@ -13,6 +13,7 @@
 <script>
 import Copyright from '@/components/copyright.vue'
 import Logo from '@/components/logo.vue'
+
 export default {
   name: 'Login',
   components: {
