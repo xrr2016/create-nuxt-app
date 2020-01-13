@@ -116,6 +116,7 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    background-color: @--background-color-base;
 
     .sub-container {
       flex: 1;
@@ -163,7 +164,7 @@ export default {
       min-height: calc(
         100vh - @--header-height - @--footer-height - @--breadcrumb-height
       );
-      margin-left: 20px;
+      padding: 0 20px;
       border-radius: 8px;
       background-color: @--background-color-white;
     }
