@@ -1,5 +1,5 @@
 <template>
-  <section class="main-container">
+  <section class="blank">
     <layout-header
       :value="$route.path"
       :menus="mainMenu"
@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.main-container {
+.blank {
   height: 100vh;
   overflow: hidden;
   background-color: @--background-color-base;
@@ -73,6 +73,7 @@ export default {
 
   .content {
     margin: 20px;
+    margin-bottom: 0;
     min-height: calc(100vh - @--header-height - @--footer-height);
     background-color: transparent;
   }
