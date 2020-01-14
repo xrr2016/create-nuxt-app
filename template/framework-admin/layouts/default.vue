@@ -71,41 +71,42 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#__nuxt {
-  .main-container {
-    height: 100vh;
+.main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: @--background-color-base;
+
+  .sub-container {
+    flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    overflow: hidden;
-    background-color: @--background-color-base;
 
-    .sub-container {
-      flex: 1;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-      .nav {
-        width: @sidebar-width;
-        flex-shrink: 0;
-      }
+    .nav {
+      width: @sidebar-width;
+      flex-shrink: 0;
     }
+  }
 
-    .main-content {
-      flex: 1;
-      width: calc(100vw - @sidebar-width);
-    }
+  .main-content {
+    flex: 1;
+    width: calc(100vw - @sidebar-width);
+  }
 
-    .sub-content {
-      overflow-y: auto;
-      height: calc(100vh - @--header-height - @--breadcrumb-height);
-    }
+  .sub-content {
+    overflow-y: auto;
+    height: calc(100vh - @--header-height - @--breadcrumb-height);
+  }
 
-    .content {
-      padding: 20px;
-      background-color: @--background-color-white;
-    }
+  .content {
+    padding: 20px;
+    min-height: calc(
+      100vh - @--header-height - @--breadcrumb-height - @--footer-height
+    );
+    background-color: @--background-color-white;
   }
 }
 </style>

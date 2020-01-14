@@ -61,21 +61,19 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#__nuxt {
-  .main-container {
-    height: 100vh;
-    overflow: hidden;
-    background-color: @--background-color-base;
+.main-container {
+  height: 100vh;
+  overflow: hidden;
+  background-color: @--background-color-base;
 
-    .sub-content {
-      overflow-y: auto;
-      height: calc(100vh - @--header-height);
-    }
+  .sub-content {
+    overflow-y: auto;
+    height: calc(100vh - @--header-height);
+  }
 
-    .content {
-      min-height: calc(100vh - @--header-height - @--footer-height);
-      background-color: transparent;
-    }
+  .content {
+    min-height: calc(100vh - @--header-height - @--footer-height);
+    background-color: transparent;
   }
 }
 </style>
