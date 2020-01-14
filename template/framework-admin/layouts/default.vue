@@ -102,7 +102,7 @@ export default {
   }
 
   .content {
-    padding: 20px;
+    margin: 0 20px;
     min-height: calc(
       100vh - @--header-height - @--breadcrumb-height - @--footer-height
     );

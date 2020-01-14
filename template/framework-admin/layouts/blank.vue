@@ -72,6 +72,7 @@ export default {
   }
 
   .content {
+    margin: 20px;
     min-height: calc(100vh - @--header-height - @--footer-height);
     background-color: transparent;
   }
