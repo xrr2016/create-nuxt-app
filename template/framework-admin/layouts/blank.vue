@@ -28,22 +28,11 @@ import {mapState, mapGetters, mapMutations} from 'vuex'
 import {FOOTER_HEIGHT} from '@/assets/export.less'
 import LayoutHeader from '@/containers/header.vue'
 import Copyright from '@/components/copyright.vue'
-import BreadCrumb from '@/components/breadcrumb'
-import Sidebar from '@/components/sidebar.vue'
 
 export default {
   components: {
     LayoutHeader,
-    BreadCrumb,
     Copyright,
-    Sidebar,
-  },
-
-  props: {
-    type: {
-      type: String,
-      default: 'default',
-    },
   },
 
   data() {
