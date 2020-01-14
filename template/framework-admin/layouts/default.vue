@@ -21,33 +21,28 @@
       <section class="main-content">
         <bread-crumb />
         <section class="sub-content">
-          <el-scrollbar wrap-class="scrollbar-wrapper">
-            <section class="content">
-              <nuxt />
-            </section>
-            <!-- footer -->
-            <el-footer :height="FOOTER_HEIGHT">
-              <copyright></copyright>
-            </el-footer>
-          </el-scrollbar>
+          <section class="content">
+            <nuxt />
+          </section>
+          <!-- footer -->
+          <el-footer :height="FOOTER_HEIGHT">
+            <copyright></copyright>
+          </el-footer>
         </section>
       </section>
     </section>
 
     <!-- blank layout -->
     <section v-if="isBlank" class="sub-content no-breadcrumb">
-      <el-scrollbar wrap-class="scrollbar-wrapper">
-        <section class="blank-content">
-          <section class="content">
-            <nuxt />
-          </section>
+      <section class="blank-content">
+        <section class="content">
+          <nuxt />
         </section>
-
-        <!-- footer -->
-        <el-footer :height="FOOTER_HEIGHT">
-          <copyright></copyright>
-        </el-footer>
-      </el-scrollbar>
+      </section>
+      <!-- footer -->
+      <el-footer :height="FOOTER_HEIGHT">
+        <copyright></copyright>
+      </el-footer>
     </section>
   </section>
 </template>
@@ -133,39 +128,15 @@ export default {
     .main-content {
       flex: 1;
       width: calc(100vw - @sidebar-width);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
 
     .sub-content {
-      overflow: hidden;
-      min-height: calc(100vh - @--header-height - @--breadcrumb-height);
-
-      & .el-scrollbar__thumb {
-        background-color: rgba(0, 0, 0, 0.4) !important;
-
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.65) !important;
-        }
-      }
-    }
-
-    .no-breadcrumb {
-      height: calc(100vh - @--header-height);
-    }
-
-    .scrollbar-wrapper {
-      overflow-x: hidden !important;
+      overflow-y: auto;
+      height: calc(100vh - @--header-height - @--breadcrumb-height);
     }
 
     .content {
-      box-sizing: border-box;
-      min-height: calc(
-        100vh - @--header-height - @--footer-height - @--breadcrumb-height
-      );
-      padding: 0 20px;
-      border-radius: 8px;
+      padding: 20px;
       background-color: @--background-color-white;
     }
 
